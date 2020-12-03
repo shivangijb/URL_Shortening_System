@@ -11,6 +11,6 @@ const shortUrlSchema = new mongoose.Schema({
         require: true,
         default: shortId.generate
     }
-})
+});
 
 module.exports = mongoose.model('shortenedUrl', shortUrlSchema);

@@ -23,7 +23,7 @@ app.post('/shortUrls', async (req,res)=>{
     await ShortenedUrl.create({original: req.body.originalUrl })
     res.redirect('/')
 
-})
+});
 
 app.get('/:shortenedUrl', async (req,res) => {
    const shortenedUrl =  await ShortenedUrl.findOne({ short: req.params.shortenedUrl});
